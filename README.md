@@ -1,5 +1,4 @@
-# Rising evidence of COVID-19 transmission potential
-to and between animals: do we need to be concerned?
+# Rising evidence of COVID-19 transmission potential to and between animals: do we need to be concerned?
 
 Supporting materials for preprint Akhmetzhanov AR, Linton NM, and Nishiura H "Rising evidence of COVID-19 transmission potential
 to and between animals: do we need to be concerned?" medrxiv 2020 ([doi:10.1101/2020.05.21.20109041](https://doi.org/10.1101/2020.05.21.20109041))
