@@ -1,0 +1,993 @@
+/**
+ * Our plugin-wide CSS file.
+ *
+ * @package WordPress
+ * @subpackage LXB_MailChimp_Tools
+ * @since LXB_MailChimp_Tools 4.0
+ */
+
+/**
+ * 1. All Admin Pages
+ *      1.1. Admin Header
+ *      1.2. Admin Page Content
+ *      1.3. Pagination
+ *      1.4. List Tables
+ *      1.5. Tabbed Panels
+ *      1.6. Animations
+ *      1.7. CSV Downloads
+ *      1.8. Overlay
+ * 2. FAQ Page
+ * 3. Campaigns Page
+ *      3.1. Single Campaign Page
+ * 4. Subscriber Page
+ *      4.1. Unsubscribed Page
+ *      4.2. Unsubscribe Confirm Overlay
+ * 5. Sidebar Sign-Up Form
+ * 6. Instant Send
+ */
+
+/**
+ * 1. All Admin Pages
+ */
+	/**
+	 * @see https://css-tricks.com/international-box-sizing-awareness-day/
+	 */
+	body[ class *= 'email-notifications' ] .wrap * {
+		box-sizing: border-box;
+	}
+
+	/**
+	 * 1.1. Admin Header
+	 */
+	.lxb_mailchimp_tools-header {
+		margin-bottom: 40px;
+	}
+
+	.wrap .lxb_mailchimp_tools-header > * {
+		margin-bottom: 20px;
+		margin-top: 0;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	.wrap .lxb_mailchimp_tools-header > .notice {
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}	
+
+	.lxb_mailchimp_tools-header h1.lxb_mailchimp_tools-title {
+		margin-bottom: 40px;
+	}
+
+	.LXB_MCT_Admin-get_page-header >:last-child {
+		margin-bottom: 0px;
+	}
+
+	.LXB_MCT_Admin-get_subtitle > * {
+		display: inline-block;
+		border-right: 1px solid #C3C3C3;
+		margin-right: 20px;
+		padding-right: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		vertical-align: middle;
+	}
+
+	@media screen and ( max-width: 480px) {
+		.LXB_MCT_Admin-get_subtitle > * {
+			border-right: none;
+			display: block;
+			padding-right: 0;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	.LXB_MCT_Admin-get_subtitle >:last-child {
+		border-right: none;
+		margin-right: 0;
+		padding-right: 0;
+	}
+
+	.LXB_MCT_Admin-get_subtitle-meta {
+		font-size: 1.4em;
+		font-weight: 600;
+	}
+
+	.LXB_MCT_Admin-get_subnav {
+		font-weight: 600;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.LXB_MCT_Admin-get_subnav-item {
+		border-right: 1px solid #ccc;
+		display: inline-block;
+		margin-right: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		padding-top: 5px;
+	}
+
+	.LXB_MCT_Admin-get_subnav-item:last-child {
+		border-right: none;
+		margin-right: 0;
+		padding-right: 0;
+	}
+
+	.LXB_MCT_Admin-get_subnav-link {
+		text-decoration: none;
+	}
+
+	.LXB_MCT_Admin-get_subnav-span {
+		color: #989898;
+	}
+
+	body .wrap .LXB_MCT_Admin-get_contrast_box {
+		background: #fff;
+		border: 1px solid #ccc;
+		border-top: none;
+		padding: 10px 12px;
+		border-radius: 0 0 2px 2px;
+	}
+
+	.LXB_MCT_Admin-get_contrast_box > * {
+		display: inline-block;
+		margin-right: 50px;
+		white-space: nowrap;
+	}
+
+	.LXB_MCT_Admin-get_contrast_box >:last-child {
+		margin-right: 0;
+	}
+
+	@media screen and ( max-width: 480px) {
+		.LXB_MCT_Admin-get_contrast_box > * {
+			display: block;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			white-space: normal;
+		}
+		.LXB_MCT_Admin-get_contrast_box >:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	/**
+	 * 1.2. Admin Page Content
+	 */
+		.LXB_MCT_Admin-get_single_content-item {
+			margin-bottom: 45px;
+		}
+
+		.LXB_MCT_Admin-get_single_content-item:last-child {
+			margin-bottom: 0;
+		}
+
+	/**
+	 * 1.3. Pagination
+	 */
+		.LXB_MCT_Pagination-get-item {
+			display: inline-block;
+			border: 1px solid #cbcbcb;
+			margin-right: 5px;
+			padding: 5px 10px;
+			background: #fff;
+			text-decoration: none;
+		}
+
+		.LXB_MCT_Pagination-get-item-link {
+			color: #000;
+		}
+
+		.LXB_MCT_Pagination-get-item-link:hover {
+			background: #CECECE;
+			color: #000;
+		}
+
+		.LXB_MCT_Pagination-get-item-of {
+			border: none;
+			background: none;
+			padding-left: 3px;
+			padding-right: 3px;
+		}
+
+		.LXB_MCT_Pagination-get-item .dashicons {
+			font-size: 16px;
+			height: 16px;
+			width: 16px;
+		}
+
+		.LXB_MCT_Pagination-get-item:last-child {
+			margin-right: 0;
+		}
+
+	/**
+	 * 1.4. List Tables
+	 */
+		table.LXB_MCT_Table-get {
+			margin-bottom: 30px;
+			box-shadow: none;
+			border-collapse: collapse;
+		}
+
+		table.LXB_MCT_Table-get:last-child {
+			margin-bottom: 0px;
+		}
+
+		table.LXB_MCT_Table-get th {
+			font-weight: 600;
+		}
+
+		table.LXB_MCT_Table-get th,
+		table.LXB_MCT_Table-get td {
+			padding: 8px 9px;
+			border: 1px solid #ccc;
+		}
+
+		table.LXB_MCT_Table-get th a {
+			color: #000;
+		}
+
+		table.LXB_MCT_Table-get th a .dashicons {
+			color: #9D9D9D;
+			font-size: 1.2em;
+			vertical-align: middle;
+			padding-left: 5px;
+		}
+
+		table.LXB_MCT_Table-get td {
+		}
+
+		table.LXB_MCT_Table-get tr:nth-child( odd) td {
+			background: #f9f9f9;
+		}
+
+		/* Make unsubscribe column small */
+		.email-notifications_page_email-notifications-subscribed table.LXB_MCT_Table-get th:last-child {
+			width: 150px;
+		}
+
+		/* Hide the sort on the unsubscribe column */
+		.email-notifications_page_email-notifications-subscribed table.LXB_MCT_Table-get th:last-child .dashicons-sort {
+			display: none;
+		}
+	/**
+	 * 1.5. Tabbed Panels
+	 */
+		.lxb_mailchimp_tools-tabbed_panels-tabs .LXB_MCT_Admin-get_content_nav-link:first-child {
+			margin-left: 2px;
+		}
+
+		.lxb_mailchimp_tools-tabbed_panels-panel {
+			margin: 0;
+		}
+
+	/**
+	 * 1.6. Animations
+	 */
+		.lxb_mailchimp_tools-spin {
+			animation: lxb_mailchimp_tools-spin 1s infinite;
+			animation-timing-function: linear;
+		}
+
+		@keyframes lxb_mailchimp_tools-spin {
+			0% {
+				transform: rotate( 0deg);
+			}
+			100% {
+				transform: rotate( 360deg);
+			}
+		}
+
+	/**
+	 * 1.7. CSV Downloads
+	 */
+		.LXB_MCT_Admin-get_csv_button {
+			background: #0071BD;
+			border: none;
+			color: #fff;
+			padding: 10px 11px;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+
+		.LXB_MCT_Admin-get_csv_button .dashicons {
+			height: 0;
+		}
+
+	/**
+	 * 1.8. Overlay
+	 */
+		.LXB_MCT_Overlay-get {
+			display: none;
+		}
+
+		.LXB_MCT_Overlay-get-active {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba( 0, 0, 0, .7 );
+			z-index: 100000;
+		}
+
+		.LXB_MCT_Overlay-get-inner {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate( -50%, -50% );
+			box-shadow: 0 0 1em 0 rgba( 0, 0, 0, .6 );
+		}
+
+		.LXB_MCT_Overlay-get-inner-inner {
+			position: relative;
+			padding: 1em;
+			max-width: 100%;
+			background: #fff;
+			border-radius: 2px;
+			padding: 1.5em 1.5em 1em 1.5em;
+		}
+
+		.LXB_MCT_Overlay-get-title {
+			margin: 0 0 1em 0;
+			font-size: 1.2em;
+			line-height: 1.2em;
+		}
+
+		a.LXB_MCT_Overlay-get-close,
+		.LXB_MCT_Overlay-get-active .dashicons-dismiss {
+			color: #e50000;
+			text-decoration: none;
+		}
+
+		a.LXB_MCT_Overlay-get-close {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			z-index: 999;
+		}
+
+		.LXB_MCT_Overlay-get-active .dashicons-dismiss {
+			font-size: 25px;
+			height: 25px;
+			width: 25px;
+		}
+
+		.LXB_MCT_Overlay-get-content {
+			margin-bottom: 1.5em;
+		}
+
+		.LXB_MCT_Overlay-get-buttons > * {
+			display: inline-block;
+			margin: 0 3em 1em 0;
+			font-size: .9em;
+			line-height: .9em;
+		}
+
+		.LXB_MCT_Overlay-get-buttons > :last-child {
+			margin: 0;
+		}
+
+		.LXB_MCT_Overlay-get-button {
+			display: inline-block;
+			color: #fff;
+			background: #000;
+			margin: 0 2em 0 0;
+			padding: 1em 2em;
+			border-radius: 2px;
+			text-transform: uppercase;
+			border: none;
+			text-decoration: none;
+			text-align: center;
+		}
+
+		.LXB_MCT_Overlay-get-button:hover,
+		.LXB_MCT_Overlay-get-button:focus,
+		.LXB_MCT_Overlay-get-button:active,
+		.LXB_MCT_Overlay-get-button {
+			color: #fff;
+		}
+
+		.LXB_MCT_Overlay-get-button {
+			letter-spacing: 1px;
+		}
+
+		.LXB_MCT_Overlay-get-button:last-child {
+			margin-right: 0;
+		}
+
+
+		.LXB_MCT_Overlay-get-button[data-action='yes'] {
+			background: #76AC00;
+		}
+
+		.LXB_MCT_Overlay-get-button[data-action='no'] {
+			background: #e50000;
+		}
+
+		.LXB_MCT_Overlay-get-link {
+			text-decoration: none;
+			display: inline-block;
+			font-weight: 600;
+		}		
+
+/**
+ * 2. FAQ Page
+ */
+	.lxb_mct_messaging dl {
+		margin-bottom: 20px;
+	}
+
+	.lxb_mct_messaging dt {
+		font-weight: 600;
+	}
+
+/**
+ * 3. Campaigns Page
+ */
+	.LXB_MCT_Campaigns_Page-get_status_label-text {
+		background: #000;
+		color: #fff;
+		display: inline-block;
+		padding: 3px 20px;
+		text-transform: uppercase;
+	}
+
+	.LXB_MCT_Campaigns_Page-get_status_label-paused-text {
+		color: #000;
+		background: #FFD101
+	}
+
+	.LXB_MCT_Campaigns_Page-get_status_label-active-text {
+		background: #79AA00
+	}
+
+	/**
+	 * 3.1. Single Campaign Page
+	 */
+	.LXB_MCT_Admin-get_progress_bar {
+		background: #E1E1E1;
+		border-radius: 2px;
+		height: 16px;
+		line-height: 0;
+	}
+
+	.LXB_MCT_Admin-get_progress_bar-progress {
+		background: #0172AA;
+		display: inline-block;
+		border-radius: 2px;
+		height: 100%;
+		line-height: 0;
+	}
+
+	.lxb_mailchimp_tools-chart {
+		overflow: hidden;
+	}
+
+	.lxb_mailchimp_tools-chart-section {
+		width: calc( 50% - 30px);
+		float: left;
+		padding: 0 15px;
+	}
+
+	.lxb_mailchimp_tools-chart-section:last-child {
+		float: right;
+	}
+
+	@media screen and ( max-width: 480px) {
+		.lxb_mailchimp_tools-chart-section {
+			float: none;
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			margin-bottom: 25px;
+		}
+		.lxb_mailchimp_tools-chart-section:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	.lxb_mailchimp_tools-chart-item {
+		margin-bottom: 20px;
+		position: relative;
+	}
+
+	.lxb_mailchimp_tools-chart-item:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 0px;
+		border-bottom: 1px dotted #ccc;
+	}
+
+	.lxb_mailchimp_tools-chart-item:last-child {
+		margin-bottom: 0px;
+	}
+
+	.lxb_mailchimp_tools-chart-item-label {
+		overflow: hidden;
+		padding-bottom: 3px;
+	}
+
+	.lxb_mailchimp_tools-chart-item-label >:first-child {
+		float: left;
+	}
+
+	.lxb_mailchimp_tools-chart-item-label >:last-child {
+		float: right;
+	}
+
+	.lxb_mailchimp_tools-chart-item-label-secondary {
+		padding-left: 5px;
+		font-style: normal;
+		display: inline-block;
+	}
+
+	.lxb_mailchimp_tools-chart-item-progress_bar {
+		margin-bottom: 25px;
+	}
+
+	.lxb_mailchimp_tools-chart-item-progress_bar:after {
+		border-bottom: none;
+	}
+
+	.lxb_mailchimp_tools-icon_cards {
+		background: #fff;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+		overflow: hidden;
+		display: table;
+		width: 100%;
+	}
+
+	.lxb_mailchimp_tools-icon_cards-item {
+		width: 25%;
+		text-align: center;
+		display: table-cell;
+		border-right: 1px solid #ccc;
+		height: 100%;
+		padding: 20px;
+	}
+
+	.lxb_mailchimp_tools-icon_cards-item:last-child {
+		border-right: 0;
+	}
+
+	@media screen and ( max-width: 480px) {
+		.lxb_mailchimp_tools-icon_cards {
+			display: block;
+		}
+		.lxb_mailchimp_tools-icon_cards-item {
+			width: 100%;
+			border-right: none;
+			display: block;
+			border-bottom: 1px solid #ccc;
+			padding: 10px 0;
+		}
+	}
+
+	.lxb_mailchimp_tools-icon_cards-item .dashicons {
+		font-size: 2.45em;
+		line-height: 1em;
+		height: auto;
+		width: auto;
+		margin: 0 0 5px 0;
+		display: block;
+	}
+
+	.lxb_mailchimp_tools-icon_cards-item .dashicons-email,
+	.lxb_mailchimp_tools-icon_cards-item .dashicons-format-aside {
+		color: #096DA1;
+	}
+
+	.lxb_mailchimp_tools-icon_cards-item .dashicons-thumbs-up,
+	.lxb_mailchimp_tools-icon_cards-item .dashicons-email-alt {
+		color: #7AA903;
+	}
+
+	.lxb_mailchimp_tools-icon_cards-item .dashicons-chart-area,
+	.lxb_mailchimp_tools-icon_cards-item .dashicons-thumbs-down {
+		color: #FFD101;
+	}
+
+	.lxb_mailchimp_tools-icon_cards-item .dashicons-dismiss {
+		color: #CF0908;
+	}
+
+	/**
+	 * Seems like you have to set the height and width in the DOM in order to
+	 * avoid having a fun-house mirror effect.
+	 */
+	.LXB_MCT_Campaigns_Page-get_24_hour_canvas-wrapper {
+		background: #fff;
+	}
+
+/**
+ * 4. Subscriber Page
+ */
+	.wrap .LXB_MCT_Unsubscribed_Page-get_single_page-nav,
+	.wrap .LXB_MCT_Subscribed_Page-get_single_page-nav {
+		overflow: hidden;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 0;
+		width: 100%;
+	}
+
+	.LXB_MCT_Unsubscribed_Page-get_single_page-nav > *,
+	.LXB_MCT_Subscribed_Page-get_single_page-nav > * {
+		display: inline-block;
+		vertical-align: middle;
+		border-right: 1px solid #ccc;
+		border-bottom: none;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.LXB_MCT_Unsubscribed_Page-get_single_page-nav >:first-child,
+	.LXB_MCT_Subscribed_Page-get_single_page-nav >:first-child {
+		padding-left: 0;
+	}
+
+	.LXB_MCT_Unsubscribed_Page-get_single_page-nav >:last-child,
+	.LXB_MCT_Subscribed_Page-get_single_page-nav >:last-child {
+		border-right: none;
+	}
+
+	.LXB_MCT_Member_Page-get_next_prev {
+		padding-bottom: 10px;
+		padding-top: 5px;
+	}
+
+	.LXB_MCT_Member_Page-get_next_prev > * {
+		display: inline-block;
+	}
+
+	.LXB_MCT_Member_Page-get_next_prev-x_of_y {
+		font-size: 80%;
+		line-height: 1em;
+		margin-right: 12px;
+		vertical-align: middle;
+	}
+
+	.LXB_MCT_Member_Page-get_next_prev-buttons a {
+		text-decoration: none;
+		border: 1px solid #ccc;
+		background: #fff;
+		padding: 2px 5px;
+		line-height: 0;
+		display: inline-block;
+		border-radius: 2px;
+	}
+
+	.LXB_MCT_Member_Page-get_next_prev-buttons a .dashicons {
+		font-size: 12px;
+		height: auto;
+		width: auto;
+		line-height: 12px;
+		vertical-align: middle;
+	}
+
+	.LXB_MCT_Member_Page-get_next_prev-buttons a:hover {
+		background: #e0e0e0;
+	}
+
+	.LXB_MCT_Subscribers-get_stars {
+		display: inline-block;
+	}
+
+	.LXB_MCT_Subscribers-get_stars .LXB_MCT_Subscribers-get_stars-star-filled {
+		color: #FCCE09;
+	}
+
+	.LXB_MCT_Subscribers-get_stars .LXB_MCT_Subscribers-get_stars-star-empty {
+		color: #BFBFBF;
+	}
+
+	.LXB_MCT_Admin-get_content_nav {
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 35px;
+	}
+
+	.LXB_MCT_Admin-get_content_nav-link {
+		text-decoration: none;
+		display: inline-block;
+		margin-right: 30px;
+		font-weight: 600;
+		padding-bottom: 6px;
+	}
+
+	.LXB_MCT_Admin-get_content_nav-link.lxb_mailchimp_tools-active {
+		color: #000;
+		position: relative;
+	}
+
+	.LXB_MCT_Admin-get_content_nav-link.lxb_mailchimp_tools-active:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: #0073A9;
+		left: 0;
+		bottom: 0;
+		position: absolute;
+	}
+
+	.lxb_mailchimp_tools-tabbed_panels-panel.lxb_mailchimp_tools-inactive {
+		height: 0;
+		overflow: hidden;
+		width: 0;
+		position: absolute;
+	}
+
+	.LXB_MCT_Member_Page-get_details-section {
+		margin-bottom: 60px;
+	}
+
+	.LXB_MCT_Member_Page-get_details-section:last-child {
+		margin-bottom: 0;
+	}
+
+	.LXB_MCT_Member_Page-get_details-item {
+		padding-bottom: 8px;
+		border-bottom: 1px dotted #ccc;
+		margin-bottom: 25px;
+		width: calc( 33% - 50px);
+		margin-right: 50px;
+		display: inline-block;
+	}
+
+	@media screen and ( max-width: 720px) {
+		.LXB_MCT_Member_Page-get_details-item {
+			width: calc( 50% - 50px);
+		}
+	}
+
+	@media screen and ( max-width: 480px) {
+		.LXB_MCT_Member_Page-get_details-item {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	.LXB_MCT_Member_Page-get_details-item-label {
+		margin: 0 0 5px 0;
+	}
+
+	.LXB_MCT_Member_Page-get_subscriber_activity {
+		margin-bottom: 45px;
+	}
+
+	.LXB_MCT_Member_Page-get_subscriber_activity:last-child {
+		margin-bottom: 0;
+	}
+
+	h4.LXB_MCT_Activity-get_subscriber_recent_campaigns-campaign_title {
+		position: relative;
+		padding-bottom: 20px;
+		font-size: 90%;
+		margin: 0 0 5px 0;
+	}
+
+	h4.LXB_MCT_Activity-get_subscriber_recent_campaigns-campaign_title a {
+		text-decoration: none;
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-campaign_title:after {
+		position: absolute;
+		width: 1px;
+		background: #ccc;
+		height: 18px;
+		bottom: 0;
+		left: 60px;
+		display: block;
+		content: "";
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-actions {
+		background: #fff;
+		border: 1px solid #ccc;
+		margin: 0 0 30px 0;
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-action {
+		border-bottom: 1px solid #D4F1F5;
+		margin: 0;
+		display: table;
+		width: 100%;
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-action:last-child {
+		border-bottom: none;
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-action .dashicons {
+		color: #9AD7EC;
+		font-size: 2.45em;
+		line-height: 1em;
+		height: auto;
+		width: auto;
+		margin: 0 0 5px 0;
+		display: block;
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-action .dashicons-dismiss {
+		color: #CF0908;
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-action > * {
+		display: table-cell;
+		vertical-align: top;
+		padding: 25px 20px;
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-time {
+		text-align: center;
+		margin-right: 35px;
+		width: 100px;
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-action-type {
+		font-weight: 600;
+		padding-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.LXB_MCT_Activity-get_subscriber_recent_campaigns-action-text a {
+		text-decoration: none;
+	}
+
+	.LXB_MCT_View_More-get_link {
+		display: inline-block;
+		background: #E2E2E2;
+		color: #656565;
+		border-radius: 2px;
+		text-decoration: none;
+		padding: 10px 22px;
+		margin: 2px;
+	}
+
+	/**
+	 * 4.1. Unsubscribed Page
+	 */
+		.wrap .lxb_mailchimp_tools-header > .LXB_MCT_Unsubscribed_Page-get_status_box {
+			background: #FACCCC;
+			border: 1px solid #DDA9AD;
+			padding: 10px 12px;
+			border-radius: 2px;
+		}
+
+		.LXB_MCT_Unsubscribed_Page-get_status_box > * {
+			white-space: nowrap;
+		}
+
+		.LXB_MCT_Unsubscribed_Page-get_status_box-title {
+			display: inline-block;
+			margin-right: 25px;
+		}
+
+		.LXB_MCT_Unsubscribed_Page-get_status_box a {
+			color: #000;
+		}
+
+		.LXB_MCT_Unsubscribed_Page-get_status_box-after {
+			display: inline-block;
+			margin-right: 25px;
+		}
+
+		@media screen and ( max-width: 480px) {
+			.LXB_MCT_Unsubscribed_Page-get_status_box-title,
+			.LXB_MCT_Unsubscribed_Page-get_status_box-after,
+			.LXB_MCT_Unsubscribed_Page-get_status_box > * {
+				white-space: normal;
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+		}
+
+/**
+ * 5. Sidebar Sign-Up Form
+ */
+	.LXB_MCT_Subscribe_Shortcode-get_result_holder {
+		padding: 10px 15px !important;
+		margin: 8px 0 10px 0;
+		word-wrap: break-word;
+		hyphens: none;
+		clear: both;
+		font-size: inherit;
+		color: #333;
+		background-color: #ffe7bc;
+		border-bottom: 2px solid #ffa300;
+	}
+
+	.LXB_MCT_Subscribe_Shortcode-get_result_holder > * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.LXB_MCT_Subscribe_Shortcode-get_result_holder.error {
+		background-color: #fbd9d8;
+		border-bottom-color: #e30200;
+	}
+
+	.LXB_MCT_Subscribe_Shortcode-get_result_holder.error a {
+		color: #e30200;
+		text-decoration: underline;
+	}
+
+	.LXB_MCT_Subscribe_Shortcode-get_result_holder.success {
+		background-color: #e4eecc;
+		border-bottom-color: #77ab00;
+	}
+
+	.feedburner form.lxb_mct_subscribe_widget_form {
+		white-space: normal;
+	}
+
+	.feedburner.widget_lxb_mct_subscribe_widget {
+		height: auto;
+	}
+
+/**
+ * 6. Instant Send
+ */
+	#publish-overlay .LXB_MCT_Overlay-get-button {
+		display: block;
+		margin-bottom: 1em;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	#publish-overlay .LXB_MCT_Overlay-get-button:last-child {
+		margin-bottom: 0;
+	}
+
+	#publish-overlay .LXB_MCT_Overlay-get-button-publish_without_sending {
+		background: #000;
+	}
+
+	.LXB_MCT_Immediate_Send-preview-label {
+		display: block;
+		margin-top: 10px;
+	}
+
+	.LXB_MCT_Immediate_Send-preview-button-wrap .spinner {
+		float: none;
+		margin-top: 5px;
+	}
+
+	.LXB_MCT_Immediate_Send-preview-feedback {
+		padding: 6px 12px;
+		background: #f1f1f1;
+		position: relative;
+		margin-top: 15px;
+		font-weight: 600;
+	}
+
+	.LXB_MCT_Immediate_Send-preview-feedback-color {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: auto;
+		background: #ccc;
+		width: 3px;
+	}
+
+	.LXB_MCT_Immediate_Send-preview-feedback-color.green {
+		background: #669d03	;
+	}
+
+	.LXB_MCT_Immediate_Send-preview-feedback-color.red {
+		background: #db0005;
+	}
+
+	.LXB_MCT-send_radios {
+		margin-bottom: 20px;
+	}
+
+	.LXB_MCT-send_radios label {
+		margin-right: 10px;
+	}
